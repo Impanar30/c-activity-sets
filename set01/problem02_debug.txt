@@ -1,20 +1,4 @@
- gdb a.out
-GNU gdb (GDB) 7.6.1
-Copyright (C) 2013 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "mingw32".
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>...
-a.out: No such file or directory.
-(gdb) b main
-No symbol table is loaded.  Use the "file" command.
-Make breakpoint pending on future shared library load? (y or [n]) y
-Breakpoint 1 (main) pending.
-(gdb) q
-PS C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01> gdb ./problem02.exe
+gdb ./problem02.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -29,8 +13,8 @@ Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set0
 Breakpoint 1 at 0x40146e: file problem02.c, line 6.
 (gdb) r
 Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem02.exe 
-[New Thread 9452.0x3aac]
-[New Thread 9452.0x27f8]
+[New Thread 3820.0x219c]
+[New Thread 3820.0x341c]
 
 Breakpoint 1, main () at problem02.c:6
 6           int a=8, b=7;
@@ -40,5 +24,5 @@ Breakpoint 1, main () at problem02.c:6
 15+6422356=42008758         return 0;
 (gdb) c
 Continuing.
-[Inferior 1 (process 9452) exited normally]
+[Inferior 1 (process 3820) exited normally]
 (gdb) q
