@@ -1,4 +1,17 @@
 #include <stdio.h>
+int input();
+int sum(int a, int b);
+void output(int a, int b, int sum);
+
+int main()
+{
+    int a, b;
+    a=input();
+    b=input();
+    int add=sum(a, b);
+    output(a, b, add);
+    return 0;
+}
 
 int input()
 {
@@ -18,12 +31,3 @@ void output(int a, int b, int sum)
     printf("%d+%d=%d", a, b, sum);
 }
 
-int main()
-{
-    int a, b;
-    a=input();
-    b=input();
-    int add=sum(a, b);
-    output(a, b, add);
-    return 0;
-}
