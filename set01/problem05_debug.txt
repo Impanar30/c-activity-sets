@@ -1,0 +1,51 @@
+db ./problem05.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01\problem05.exe...done.
+(gdb) b 5
+Breakpoint 1 at 0x401466: file problem05.c, line 5.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem05.exe 
+[New Thread 6328.0x3a58]
+[New Thread 6328.0x376c]
+
+Breakpoint 1, input () at problem05.c:6
+6           printf("Enter the numbers:");
+(gdb) n
+Enter the numbers:7         scanf("%d", &number);
+(gdb) n
+n
+8           return number;
+(gdb) n
+10      
+(gdb) n
+main () at problem05.c:30
+30          b=input();
+(gdb) n
+
+Breakpoint 1, input () at problem05.c:6
+6           printf("Enter the numbers:");
+(gdb) n
+Enter the numbers:7         scanf("%d", &number);
+(gdb) n
+8           return number;
+(gdb) c
+Continuing.
+
+Breakpoint 1, input () at problem05.c:6
+6           printf("Enter the numbers:");
+(gdb) n
+Enter the numbers:7         scanf("%d", &number);
+(gdb) n
+8           return number;
+(gdb) c
+Continuing.
+The largest number of 6422476, 6422476, 6422476 is 6422476[Inferior 1 (process 6328) exited normally]
+(gdb) q
