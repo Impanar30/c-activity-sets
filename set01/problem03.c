@@ -2,10 +2,10 @@
 
 int input()
 {
-    int n;
+    int number;
     printf("Enter the numbers:");
-    scanf("%d", &n);
-    return n;
+    scanf("%d", &number);
+    return number;
 }
 
 int sum(int a, int b)
@@ -15,7 +15,7 @@ int sum(int a, int b)
 
 void output(int a, int b, int sum)
 {
-    printf("Sum of %d and %d is %d", a, b, sum);
+    printf("%d+%d=%d", a, b, sum);
 }
 
 int main()
@@ -24,6 +24,6 @@ int main()
     a=input();
     b=input();
     int add=sum(a, b);
-    output(a, b, sum);
+    output(a, b, add);
     return 0;
 }
