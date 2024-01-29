@@ -1,4 +1,4 @@
-db ./problem05.exe
+gdb ./problem05.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -9,43 +9,29 @@ This GDB was configured as "mingw32".
 For bug reporting instructions, please see:
 <http://www.gnu.org/software/gdb/bugs/>...
 Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01\problem05.exe...done.
-(gdb) b 5
-Breakpoint 1 at 0x401466: file problem05.c, line 5.
+(gdb) b main
+Breakpoint 1 at 0x4014f3: file problem05.c, line 29.
 (gdb) r
 Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem05.exe 
-[New Thread 6328.0x3a58]
-[New Thread 6328.0x376c]
+[New Thread 9488.0x4fc]
+[New Thread 9488.0x1728]
 
-Breakpoint 1, input () at problem05.c:6
-6           printf("Enter the numbers:");
+Breakpoint 1, main () at problem05.c:29
+29          a=input();
 (gdb) n
-Enter the numbers:7         scanf("%d", &number);
-(gdb) n
-n
-8           return number;
-(gdb) n
-10      
-(gdb) n
-main () at problem05.c:30
+Enter the numbers:67
 30          b=input();
 (gdb) n
-
-Breakpoint 1, input () at problem05.c:6
-6           printf("Enter the numbers:");
+Enter the numbers:78
+31          c=input();
 (gdb) n
-Enter the numbers:7         scanf("%d", &number);
+Enter the numbers:57
+32          int large=compare(a, b, c);
 (gdb) n
-8           return number;
+33          output(a, b, c, large);
+(gdb) n
+The largest number of 67, 78, 57 is 7834            return 0;
 (gdb) c
 Continuing.
-
-Breakpoint 1, input () at problem05.c:6
-6           printf("Enter the numbers:");
-(gdb) n
-Enter the numbers:7         scanf("%d", &number);
-(gdb) n
-8           return number;
-(gdb) c
-Continuing.
-The largest number of 6422476, 6422476, 6422476 is 6422476[Inferior 1 (process 6328) exited normally]
+[Inferior 1 (process 9488) exited normally]
 (gdb) q
