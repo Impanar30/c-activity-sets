@@ -9,7 +9,7 @@ typedef struct complex Complex;
 Complex input_complex()
 {
     Complex n;
-    prinf("Enter the real number:");
+    printf("Enter the real number:");
     scanf("%f", &n.real);
     printf("Enter the imagianry number:");
     scanf("%f", &n.imaginary);
