@@ -1,0 +1,7 @@
+1. why to use <stdio.h> in the header file?
+2. Why it is compulsory to use %d in the program?
+3. difference between call by value and call by reference
+4. what is the use of if and else if in c funtion?
+5. why to use pointer in the function and use of pointer
+6. what is the advantage in call by value and call by reference
+7. Use of debug
