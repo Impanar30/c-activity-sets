@@ -1,0 +1,36 @@
+gdb ./problem11.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01\problem11.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401526: file problem11.c, line 35.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem11.exe 
+[New Thread 6720.0x127c]
+[New Thread 6720.0xa20]
+
+Breakpoint 1, main () at problem11.c:35
+35          a=input_complex();
+(gdb) n
+Enter the real number:4
+Enter the imagianry number:3
+36          b=input_complex();
+(gdb) n
+Enter the real number:2
+Enter the imagianry number:3
+37          Complex sum= add_complex(a, b);
+(gdb) n
+38          output(a, b, sum);
+(gdb) n
+4.000000+3.000000i + 3.000000+2.000000i = 7.000000+7.000000i39      return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 6720) exited normally]
+(gdb) q
