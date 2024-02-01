@@ -1,0 +1,33 @@
+gdb ./problem03.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02\problem03.exe...done.     
+(gdb) b main
+Breakpoint 1 at 0x40150e: file problem03.c, line 33.  
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02/./problem03.exe
+[New Thread 11036.0x2028]
+[New Thread 11036.0x3674]
+
+Breakpoint 1, main () at problem03.c:33
+33          int num=input_number();
+(gdb) n
+Enter the number:
+8
+34          int res=is_composite(num);
+(gdb) n
+35          output(num, res);
+(gdb) n
+8 is a composite number
+36          return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 11036) exited normally]
+(gdb) q
