@@ -29,7 +29,7 @@ int is_composite(int n)
     return 0;
 }
 
-int sum_composite_number(int n, int a[n])
+int sum_composite_numbers(int n, int a[n])
 {
     int sum=0;
     for(int i=0; i<n; ++i)

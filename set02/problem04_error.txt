@@ -1,0 +1,8 @@
+ gcc -g -O0 problem04.c -o problem04.exe
+problem04.c: In function 'main':
+problem04.c:54:13: warning: implicit declaration of function 'sum_composite_numbers' [-Wimplicit-function-declaration]
+     int res=sum_composite_numbers(length, data);
+             ^~~~~~~~~~~~~~~~~~~~~
+C:\Users\Admin\AppData\Local\Temp\ccEKJPdo.o: In function `main':
+C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02/problem04.c:54: undefined reference to `sum_composite_numbers'
+collect2.exe: error: ld returned 1 exit status
