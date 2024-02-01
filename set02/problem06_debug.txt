@@ -1,0 +1,33 @@
+gdb ./problem06.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.     
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02\problem06.exe...done.
+(gdb) b 29
+Breakpoint 1 at 0x401522: file problem06.c, line 29.  
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02/./problem06.exe 
+[New Thread 11432.0x39b0]
+[New Thread 11432.0x780]
+
+Breakpoint 1, main () at problem06.c:32
+32          input_string(str);
+(gdb) n
+Enter the string:
+hello
+34          str_reverse(str, rev_str);
+(gdb) n
+35          output(str, rev_str);
+(gdb) n
+The reverse of hello is olleh
+36          return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 11432) exited normally]
+(gdb) q

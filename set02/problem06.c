@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void input_String(char *a)
+void input_string(char *a)
 {
     printf("Enter the string:\n");
     scanf("%s", a);

@@ -1,0 +1,8 @@
+gcc -g -O0 problem06.c -o problem06.exe
+problem06.c: In function 'main':
+problem06.c:32:5: warning: implicit declaration of function 'input_string' [-Wimplicit-function-declaration]
+     input_string(str);
+     ^~~~~~~~~~~~
+C:\Users\Admin\AppData\Local\Temp\ccwNxZov.o: In function `main':
+C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set02/problem06.c:32: undefined reference to `input_string'
+collect2.exe: error: ld returned 1 exit status
