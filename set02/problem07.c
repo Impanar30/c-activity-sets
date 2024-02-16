@@ -1,46 +1,37 @@
 //Write a program to find the length of a line
 
+//Write a program to find the area of a triangle.
 #include <stdio.h>
-#include <math.h>
 
-typedef struct point {
-    float x, y;
-} Point;
+typedef struct _triangle {
+    float base, altitude, area;
+} Triangle;
 
-typedef struct line {
-    Point p1, p2;
-    float distance;
-} Line;
-
-Point input_point() {
-    Point p;
-    printf("Enter x-coordinate: ");
-    scanf("%f", &p.x);
-    printf("Enter y-coordinate: ");
-    scanf("%f", &p.y);
-    return p;
+Triangle input_triangle() {
+    Triangle t;
+    printf("Enter the base of the triangle: ");
+    scanf("%f", &t.base);
+    printf("Enter the altitude of the triangle: ");
+    scanf("%f", &t.altitude);
+    return t;
 }
 
-Line input_line() {
-    Line l;
-    printf("Enter coordinates for first point of the line:\n");
-    l.p1 = input_point();
-    printf("Enter coordinates for second point of the line:\n");
-    l.p2 = input_point();
-    return l;
+void find_area(Triangle *t) {
+    t->area = 0.5 * t->base * t->altitude;
 }
 
-void find_length(Line *l) {
-    l->distance = sqrt(pow((l->p2.x - l->p1.x), 2) + pow((l->p2.y - l->p1.y), 2));
-}
-
-void output(Line l) {
-    printf("Length of the line: %.2f\n", l.distance);
+void output(Triangle t) {
+    printf("Base of the triangle: %.2f\n", t.base);
+    printf("Altitude of the triangle: %.2f\n", t.altitude);
+    printf("Area of the triangle: %.2f\n", t.area);
 }
 
 int main() {
-    Line line = input_line();
-    find_length(&line);
-    output(line);
+    Triangle t;
+
+    t = input_triangle();
+    find_area(&t);
+    output(t);
+
     return 0;
 }
