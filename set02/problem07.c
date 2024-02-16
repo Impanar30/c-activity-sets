@@ -1,7 +1,7 @@
-// Write a program to find the area of a triangle
+//Write a program to find the length of a line
 
 #include <stdio.h>
-
+#include <math.h>
 
 typedef struct point {
     float x, y;
@@ -9,7 +9,7 @@ typedef struct point {
 
 typedef struct line {
     Point p1, p2;
-    float length;
+    float distance;
 } Line;
 
 Point input_point() {
@@ -23,22 +23,19 @@ Point input_point() {
 
 Line input_line() {
     Line l;
-    printf("Enter coordinates for point 1: ");
+    printf("Enter coordinates for first point of the line:\n");
     l.p1 = input_point();
-    printf("Enter coordinates for point 2: ");
+    printf("Enter coordinates for second point of the line:\n");
     l.p2 = input_point();
     return l;
 }
 
 void find_length(Line *l) {
-    float dx = l->p2.x - l->p1.x;
-    float dy = l->p2.y - l->p1.y;
-    l->length = sqrt(dx * dx + dy * dy);
+    l->distance = sqrt(pow((l->p2.x - l->p1.x), 2) + pow((l->p2.y - l->p1.y), 2));
 }
 
 void output(Line l) {
-    printf("Line segment (%.2f, %.2f) - (%.2f, %.2f) has length: %.2f\n",
-           l.p1.x, l.p1.y, l.p2.x, l.p2.y, l.length);
+    printf("Length of the line: %.2f\n", l.distance);
 }
 
 int main() {
