@@ -1,0 +1,34 @@
+gdb ./problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem01.c, line 12.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03/./problem01.exe 
+[New Thread 21432.0x2d94]
+[New Thread 21432.0xa4c]
+
+Breakpoint 1, main () at problem01.c:12
+12          input(&x1, &y1, &x2, &y2);
+(gdb) n
+Enter the x1 value:3
+Enter the y1 value:4
+Enter the x2 value:2
+Enter the y2 value:5
+13          float distance=find_distance(x1, y1, x2, y2);
+(gdb) n
+14          output(x1, y1, x2, y2, distance);
+(gdb) n
+The distance between 3.000000, 4.000000, 2.000000 and 5.000000 is -1.#IND0015       return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 21432) exited normally]
+(gdb) q
