@@ -1,0 +1,39 @@
+gdb ./problem05.exe                    
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03\problem05.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4015a1: file problem05.c, line 44.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03/./problem05.exe
+[New Thread 6696.0x1ac8]
+[New Thread 6696.0x2fcc]
+
+Breakpoint 1, 0x004015a1 in main () at problem05.c:44
+44      int main() {
+(gdb) n
+45          int n = input_array_size();
+(gdb) n
+Enter the upper limit (n): 35
+46          int a[n + 1];
+(gdb) n
+47          init_array(n, a);
+(gdb) n
+48          erotosthenes_sieve(n, a);
+(gdb) n
+49          output(n, a);
+(gdb) n
+Prime numbers between 2 and 35 are:
+2 3 5 7 11 13 17 19 23 29 31
+50          return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 6696) exited normally]
+(gdb) q
