@@ -1,5 +1,4 @@
 // Write a program to find the length of a line
-
 #include <stdio.h>
 #include <math.h>
 
@@ -14,7 +13,7 @@ typedef struct line {
 
 Point input_point() {
     Point p;
-    printf("Enter x and y coordinates: ");
+    printf("Enter coordinates (x, y): ");
     scanf("%f %f", &p.x, &p.y);
     return p;
 }
@@ -25,7 +24,6 @@ Line input_line() {
     l.p1 = input_point();
     printf("Enter coordinates of point 2: ");
     l.p2 = input_point();
-    find_length(&l);
     return l;
 }
 
@@ -36,11 +34,12 @@ void find_length(Line *l) {
 }
 
 void output(Line l) {
-    printf("The length of the line is: %.2f\n", l.distance);
+    printf("Line distance: %.2f\n", l.distance);
 }
 
 int main() {
-    Line l = input_line();
-    output(l);
+    Line line = input_line();
+    find_length(&line);
+    output(line);
     return 0;
 }
