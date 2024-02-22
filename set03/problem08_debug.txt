@@ -1,0 +1,53 @@
+ gdb ./problem08.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03\problem08.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401628: file problem08.c, line 68.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03/./problem08.exe 
+[New Thread 8552.0x35e8]
+[New Thread 8552.0x3034]
+
+Breakpoint 1, main () at problem08.c:68
+68          if (input_polygon(&polygon)) {
+(gdb) n
+Enter the number of sides in the polygon (at least 3): 4
+Enter coordinates of point 1: 0 0
+Enter coordinates of point 2: 1 0
+Enter coordinates of point 3: 1 1
+Enter coordinates of point 4: 0 1
+69              find_perimeter(&polygon);
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set03/./problem08.exe 
+[New Thread 6924.0x336c]
+[New Thread 6924.0xb00]
+
+Breakpoint 1, main () at problem08.c:68
+68          if (input_polygon(&polygon)) {
+(gdb) n
+Enter the number of sides in the polygon (at least 3): 4
+Enter coordinates of point 1: 0 0
+Enter coordinates of point 2: 0 1
+Enter coordinates of point 3: 1 1
+Enter coordinates of point 4: 1 0
+69              find_perimeter(&polygon);
+(gdb) n
+70              output(polygon);
+(gdb) n
+Polygon perimeter: 4.00
+72          return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 6924) exited normally]
+(gdb) q

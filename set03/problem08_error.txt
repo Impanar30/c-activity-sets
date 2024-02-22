@@ -1,0 +1,7 @@
+ gcc -g -O0 problem08.c -o problem08.exe
+problem08.c: In function 'input_polygon':
+problem08.c:40:19: error: too many arguments to function 'input_point'
+         p->p[i] = input_point("Enter coordinates of point %d (x y): ", i + 1);
+                   ^~~~~~~~~~~
+problem08.c:24:7: note: declared here
+ Point input_point(char *prompt_msg) {
