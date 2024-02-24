@@ -1,4 +1,4 @@
-gdb ./problem01.exe
+ gdb ./problem01.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -9,18 +9,18 @@ This GDB was configured as "mingw32".
 For bug reporting instructions, please see:
 <http://www.gnu.org/software/gdb/bugs/>...
 Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01\problem01.exe...done.
-(gdb) b main
-Breakpoint 1 at 0x40146e: file problem01.c, line 6.
+(gdb) b 5
+Breakpoint 1 at 0x40146e: file problem01.c, line 5.
 (gdb) r
 Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem01.exe 
-[New Thread 11984.0x1cc8]
-[New Thread 11984.0x2b78]
+[New Thread 11592.0x40a4]
+[New Thread 11592.0x25e8]
 
 Breakpoint 1, main () at problem01.c:6
-6           printf("Impana");
+6           printf("Impana.R");
 (gdb) n
-Impana7     return 0;
+Impana.R7           return 0;
 (gdb) c
 Continuing.
-[Inferior 1 (process 11984) exited normally]
+[Inferior 1 (process 11592) exited normally]
 (gdb) q
