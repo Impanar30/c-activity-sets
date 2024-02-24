@@ -1,0 +1,13 @@
+ gcc -g -O0 problem01.c -o problem01.exe
+problem01.c: In function 'main':
+problem01.c:13:5: error: too few arguments to function 'add'
+     add(n1, n2, d1, d2, &sum);
+     ^~~
+problem01.c:6:6: note: declared here
+ void add(int num1, int den1, int num2, int den2, int *res_num, int *res_den);
+      ^~~
+problem01.c:14:5: error: too few arguments to function 'output'
+     output(n1, n2, d1, d2, sum);
+     ^~~~~~
+problem01.c:7:6: note: declared here
+ void output(int num1, int den1, int num2, int den2, int res_num, int res_den);

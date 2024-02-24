@@ -13,16 +13,16 @@ Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set0
 Breakpoint 1 at 0x40146e: file problem02.c, line 6.
 (gdb) r
 Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem02.exe 
-[New Thread 3820.0x219c]
-[New Thread 3820.0x341c]
+[New Thread 17068.0x3ecc]
+[New Thread 17068.0x27b4]
 
 Breakpoint 1, main () at problem02.c:6
-6           int a=8, b=7;
+6           int num1=18, num2=16;
 (gdb) n
-7           printf("%d+%d=%d", a+b);
+7           printf("%d", num1+num2);//adding two numbers
 (gdb) n
-15+6422356=42008758         return 0;
+348         return 0;
 (gdb) c
 Continuing.
-[Inferior 1 (process 3820) exited normally]
+[Inferior 1 (process 17068) exited normally]
 (gdb) q
