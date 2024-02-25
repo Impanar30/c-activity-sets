@@ -26,7 +26,15 @@ int input() {
 
 int compare(int a, int b, int c) {
     int largest;
-    largest=a>=b?:a>=c?:b>=c; //variable=expression1:expression2:expression3
+    if(a>=b && a>=c) {
+        return a;
+    }
+    else if(b>=c) {
+        return b;
+    }
+    else {
+        return c;
+    }
     return largest;
 }
 
