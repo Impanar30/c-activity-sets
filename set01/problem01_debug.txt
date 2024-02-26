@@ -1,0 +1,29 @@
+gdb ./problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem01.c, line 7.
+(gdb) r
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem01.exe 
+[New Thread 16344.0x1a74]
+[New Thread 16344.0x53c]
+
+Breakpoint 1, main () at problem01.c:7
+7           printf("Impana.R");
+(gdb) n
+Impana.R8           return 0;
+(gdb) n
+9       }(gdb) c
+Continuing.
+[Inferior 1 (process 16344) exited normally]
+(gdb) d
+Delete all breakpoints? (y or n) n
+(gdb) q
