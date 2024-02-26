@@ -1,4 +1,4 @@
-gdb ./problem02.exe
+gdb ./problem02.exe  
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -12,17 +12,17 @@ Reading symbols from C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set0
 (gdb) b main
 Breakpoint 1 at 0x40146e: file problem02.c, line 6.
 (gdb) r
-Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem02.exe 
-[New Thread 17068.0x3ecc]
-[New Thread 17068.0x27b4]
+Starting program: C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/./problem02.exe
+[New Thread 15384.0xf10]
+[New Thread 15384.0x944]
 
 Breakpoint 1, main () at problem02.c:6
-6           int num1=18, num2=16;
+6           int num1=56, num2=23;
 (gdb) n
-7           printf("%d", num1+num2);//adding two numbers
+7           printf("%d", num1+num2);
 (gdb) n
-348         return 0;
+798         return 0;
 (gdb) c
 Continuing.
-[Inferior 1 (process 17068) exited normally]
+[Inferior 1 (process 15384) exited normally]
 (gdb) q

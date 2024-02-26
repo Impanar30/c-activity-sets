@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-    int num1=18, num2=16;
-    printf("%d", num1+num2);//adding two numbers
+    int num1=56, num2=23;
+    printf("%d", num1+num2);
     return 0;
 }
