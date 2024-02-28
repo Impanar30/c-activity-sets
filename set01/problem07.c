@@ -12,10 +12,9 @@ int input_n()
 
 int sum_n(int n)
 {
-    int s=0;
-    for(int i=0; i<n; ++i)
-    {
-        s+=i;
+    int s = 0, i;
+    for(i = 1; i <= n; ++i) {
+        s += i;
     }
     return s;
 }
