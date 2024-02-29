@@ -8,7 +8,7 @@ void output(int n, int sum);
 
 int main() {
     int number;
-    number = input();
+    number = input_n();
     int sum = sum_n_nos(number);
     output(number, sum);
     return 0;

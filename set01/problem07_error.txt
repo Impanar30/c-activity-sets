@@ -1,0 +1,6 @@
+gcc -g -O0 problem07.c -o problem07.exe
+problem07.c: In function 'main':
+problem07.c:11:14: warning: implicit declaration of function 'input' [-Wimplicit-function-declaration]
+     number = input();
+              ^~~~~
+gcc -g -O0 problem07.c -o problem07.exe
