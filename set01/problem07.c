@@ -1,34 +1,36 @@
-//Write a C program to find sum of all natural numbers until _n_
+// Write a C program to find sum of all natural numbers until _n_
 
 #include <stdio.h>
 
-int input_n()
-{
-    int n;
-    printf("Enter the n values:");
-    scanf("%d", &n);
-    return n;
-}
+int input_n();
+int sum_n_nos(int n);
+void output(int n, int sum);
 
-int sum_n(int n)
-{
-    int s = 0, i;
-    for(i = 1; i <= n; ++i) {
-        s += i;
-    }
-    return s;
-}
-
-void output(int n, int sum)
-{
-    printf("%d is %d", n, sum);
-}
-
-int main()
-{
-    int a;
-    a=input_n();
-    int sum=sum_n(a);
-    output(a,sum);
+int main() {
+    int number;
+    number = input();
+    int sum = sum_n_nos(number);
+    output(number, sum);
     return 0;
+}
+
+int input_n() {
+    int number;
+    printf("Enter the natural nunber:");
+    scanf("%d", &number);
+    return number;
+}
+
+int sum_n_nos(int n) {
+    int sum = 0;
+    int i = 1;
+    while(i <= n) {
+        sum += i;
+        i++;
+    }
+    return sum;
+}
+
+void output(int n, int sum_n_nos) {
+    printf("%d is %d", n, sum_n_nos);
 }
