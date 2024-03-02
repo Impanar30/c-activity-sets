@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int input_array_size();
-void input_array(int n, int a[n]);
+void input_array(int n, int **a);
 int sum_n_array(int n, int a[n]);
 void output(int n, int a[n],int sum);
 
@@ -24,10 +24,12 @@ int input_size_array() {
     return size;
 }
 
-void input_array(int n, int a[n]) {
-    for(int i = 0; i <= n; i++) {
-        printf("Enter the array:", i+1);
-        scanf("%d", &a[i]);
+void input_array(int n, int **a) {
+    *a = (int *) malloc(n * sizeof(int));
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &(*a)[i]);
     }
 }
 
