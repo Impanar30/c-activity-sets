@@ -1,0 +1,19 @@
+gcc -g -O0 problem08.c -o problem08.exe
+problem08.c: In function 'main':
+problem08.c:15:18: warning: passing argument 3 of 'output' makes integer from pointer without a cast [-Wint-conversion]
+     output(n, a, sum_n_array);
+                  ^~~~~~~~~~~
+problem08.c:8:6: note: expected 'int' but argument is of type 'int (*)(int,  int *)'
+ void output(int n, int a[n],int sum);
+      ^~~~~~
+problem08.c: In function 'output':
+problem08.c:46:9: error: 'sum' redeclared as different kind of symbol
+     int sum = 0, i = 0;
+         ^~~
+problem08.c:44:34: note: previous definition of 'sum' was here
+ void output(int n, int a[n], int sum) {
+
+gcc -g -O0 problem08.c -o problem08.exe
+C:\Users\Admin\AppData\Local\Temp\ccablqut.o: In function `main':
+C:\Users\Admin\Desktop\c_activity_sets\c-activity-sets\set01/problem08.c:12: undefined reference to `input_array_size'
+collect2.exe: error: ld returned 1 exit status

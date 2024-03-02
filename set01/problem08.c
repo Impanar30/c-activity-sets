@@ -5,14 +5,15 @@
 int input_array_size();
 void input_array(int n, int a[n]);
 int sum_n_array(int n, int a[n]);
-void output(int n, int a[n],int sum);
+void output(int n, int a[n],int sum_n_array);
 
 int main() {
     int size;
     size = input_array_size();
     int n, a[n];
-    sum_n_array(n, a);
-    output(n, a, sum_n_array);
+    input_array(n, a[n]);
+    int sum = sum_n_array(n, a[n]);
+    output(sum, n, a[n]);
     return 0;
 }
 
@@ -41,11 +42,12 @@ int sum_n_array(int n, int a[n]) {
     return sum;
 }
 
-void output(int n, int a[n], int sum) {
-    printf("The array of %d is %d", n, a[n], sum);
+void output(int n, int a[n], int sum_n_array) {
+    printf("The array of %d is %d", n, a[n], sum_n_array);
     int sum = 0, i = 0;
     while (i <= n) {
         sum += a[i];
         i++;
     }
+    printf("The array of %d is %d", n, a[n], sum_n_array);
 }
