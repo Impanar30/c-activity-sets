@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int input_array_size();
-void input_array(int n, int **a);
+void input_array(int n, int a[n]);
 int sum_n_array(int n, int a[n]);
 void output(int n, int a[n],int sum);
 
@@ -17,25 +17,23 @@ int main() {
     return 0;
 }
 
-int input_size_array() {
+int input_array_size() {
     int size;
     printf("Enter the size of the array:");
     scanf("%d", &size);
     return size;
 }
 
-void input_array(int n, int **a) {
-    *a = (int *) malloc(n * sizeof(int));
-
-    for (int i = 0; i < n; i++) {
-        printf("Enter element %d: ", i + 1);
-        scanf("%d", &(*a)[i]);
+void input_array(int n, int a[n]) {
+    for(int i = 0; i < n; i++) {
+        printf("Enter the array:", i+1);
+        scanf("%d", &a[i]);
     }
 }
 
 int sum_n_array(int n, int a[n]) {
     int sum = 0;
-    for(int i = 0; i <= n; ++i) {
+    for(int i = 0; i < n; ++i) {
         sum += a[i];
     }
     return sum;
@@ -43,7 +41,7 @@ int sum_n_array(int n, int a[n]) {
 
 void output(int n, int a[n], int sum) {
    printf("The array is %d");
-   for(int i = 0; i <= n; ++i) {
+   for(int i = 0; i < n; ++i) {
     printf("%d", a[i]);
    }
    printf("The elements of the array is %d", n, sum);
