@@ -1,52 +1,51 @@
-// Write a C program to find sum of _n_ different numbers entered by the user.
+//Write a C program to find sum of _n_ different numbers entered by the user.
+
 #include <stdio.h>
 
-int input_array_size()
-{
+int input_array_size();
+void input_array(int n, int a[n]);
+int sum_n_array(int n, int a[n]);
+void output(int n, int a[n],int sum);
+
+int main() {
+    int size;
+    size = input_array_size();
+    int n, a[n];
+    sum_n_array(n, a);
+    output(n, a, sum_n_array);
+    return 0;
+}
+
+int input_size_array() {
     int size;
     printf("Enter the size of the array:");
     scanf("%d", &size);
     return size;
 }
 
-void input_array(int n, int a[n])
-{
-    printf("Enter the array:");
-    for(int i=0; i<n; ++i)
-    {
-        scanf("%d", &a[i]);
+void input_array(int n, int a[n]) {
+    int i = 0;
+    while (i <= n) {
+        printf("Enter the array:");
+        scanf("%d", a[i]);
+        i++;
     }
 }
 
-int sum_n_array(int n, int a[n])
-{
-    int add, i;
-    add=0;
-    for(i=0; i<n; ++i)
-    {
-        add=add+i;
+int sum_n_array(int n, int a[n]) {
+    int sum = 0, i = 0;
+    while (i <= n) {
+        sum += a[i];
+        i++;
     }
-    return add;
+    return sum;
 }
 
-void output(int n, int a[n], int sum)
-{
-    int i=0;
-    for(i=0; i<n-1; ++i)
-    {
-        printf("%d+", a[i]);
+void output(int n, int a[n], int sum) {
+    printf("The array of %d is %d", n, a[n], sum);
+    int sum = 0, i = 0;
+    while (i <= n) {
+        sum += a[i];
+        i++;
     }
-    printf("%d is %d", a[i], sum);
 }
-
-int main()
-{
-    int n;
-    n=input_array_size();
-    int a[n], sum;
-    input_array(n,a);
-    sum=sum_n_array(n,a);
-    output(n, a, sum);
-    return 0;
-}
-
