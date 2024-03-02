@@ -7,6 +7,7 @@ int add(int a, int b);
 void output(int a, int b, int add);
 
 int main() {
+
     int a, b;
     a = input();
     b = input();
@@ -16,6 +17,7 @@ int main() {
 }
 
 int input() {
+
     int number;
     printf("Enter the numbers:");
     scanf("%d", &number);
@@ -23,9 +25,11 @@ int input() {
 }
 
 int add(int a, int b) {
+
     return a + b;
 }
 
 void output(int a, int b, int add) {
+    
     printf("%d+%d=%d", a, b, add);
 }
