@@ -10,10 +10,10 @@ void output(int n, int a[n],int sum);
 int main() {
     int size;
     size = input_array_size();
-    int n, a[n];
-    input_array(n, a[n]);
-    int sum = sum_n_array(n, a[n]);
-    output(sum, n, a[n]);
+    int a[size];
+    input_array(size, a);
+    int sum = sum_n_array(size, a);
+    output(sum, size, a);
     return 0;
 }
 
