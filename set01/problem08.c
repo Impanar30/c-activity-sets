@@ -27,7 +27,7 @@ int input_array_size() {
 void input_array(int n, int a[n]) {
     for(int i = 0; i < n; i++) {
         printf("Enter the array:", i+1);
-        scanf("%d", &a[i]);
+        scanf("%d", a[i]);
     }
 }
 
